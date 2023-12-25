@@ -14,15 +14,17 @@ div.content {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   flex-wrap: nowrap;
 }
 div.footer { display: flex; justify-content: center }
 button.src, button.run {
   cursor: pointer;
   border: none;
-  border-radius: 8px;
+  border-radius: 3px;
   background-color: #df7126;
   color: #000;
+  margin-top: 10px;
 }
 .spin {
   display: inline-block;

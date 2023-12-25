@@ -1,7 +1,7 @@
 import { ASSET_NAMES as A } from './assets'
 
-const WIDTH = 1024
-const HEIGHT = 800
+const WIDTH = 928
+const HEIGHT = 793
 let Config = null
 let uniqueId = 0
 
@@ -22,6 +22,7 @@ export default Config = {
   canvasQuery: '#canvas',
   heroId: 'hero',
   srcQuery: '.src',
+  runQuery: '.run',
   contentQuery: '.content',
   spinnerQuery: '.spin',
   fullscreenQuery: '#fullscreen',
@@ -36,6 +37,7 @@ export default Config = {
   setTimeoutDelay: 7,
   width: WIDTH,
   height: HEIGHT,
+  backWidth: 2784,
   objTickMs: 30,
   intersectionOffs: 5,
   textDist: 5,
@@ -59,16 +61,25 @@ export default Config = {
   },
 
   // sprites
-  fireflySmall: [{ x: 0, y: 0 }, { idle: [A.FireflySPath, 4, 300] }],
-  fireflyMid: [{ x: 0, y: 0 }, { idle: [A.FireflyMPath, 4, 300] }],
-  fireflyBig: [{ x: 0, y: 0 }, { idle: [A.FireflyBPath, 5, 250] }],
-  hero: [{ x: 230, y: 0 }, {
-    idleLeft: [A.IdleLeftPath, 6, 260],
+  hero: [{ x: 128, y: 645 }, {
     idleRight: [A.IdleRightPath, 6, 260],
     walkLeft: [A.WalkLeftPath, 8, 60],
     walkRight: [A.WalkRightPath, 8, 60]
   }],
-  back: [{ x: 0, y: 0, width: WIDTH, height: HEIGHT }, A.BackPath]
+  back: [
+    [{ x: 0, y: 0 }, A.L11Path],
+    [{ x: 0, y: 0 }, A.L10Path],
+    [{ x: 0, y: 0 }, A.L9Path],
+    [{ x: 0, y: 0 }, A.L8Path],
+    [{ x: 0, y: 0 }, A.L7Path],
+    [{ x: 0, y: 0 }, A.L6Path],
+    [{ x: 0, y: 0 }, A.L5Path],
+    [{ x: 0, y: 0 }, A.L4Path],
+    [{ x: 0, y: 0 }, A.L3Path],
+    [{ x: 0, y: 0 }, A.L2Path],
+    [{ x: 0, y: 0 }, A.L1Path],
+    [{ x: 0, y: 0 }, A.L0Path]
+  ]
 }
 
 // TODO:

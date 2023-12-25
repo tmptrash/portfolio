@@ -2,19 +2,21 @@ import Shared from './shared'
 import Config from './config'
 import { Hero, draw as drawHero, update as updateHero } from './hero'
 import { Level, draw as drawLevel, update as updateLevel } from './level'
-import { el, ons, findObjById, loadText, addObj, resize, show, hide, fullscreen } from './utils'
-import { Sounds, play as playSound, stop as stopSound } from './sounds'
+import { el, ons, findObjById, loadText, addObj, resize, show, hide, fullscreen, clear } from './utils'
+import { Sounds, play as playSound } from './sounds'
 import { preload } from './assets'
 
 export function Game() {
   const g = {
     pause: false,
     animateFn: null,
-    listeners: Array(1),
+    listeners: Array(3),
 
     spinner: el(Config.spinnerQuery),
     srcBtn: el(Config.srcQuery),
-    contentEl: el(Config.contentQuery)
+    runBtn: el(Config.runQuery),
+    contentEl: el(Config.contentQuery),
+    canvas: el(Config.canvasQuery)
   }
   const fn = animate.bind(null, g)
   g.animateFn = Config.useSetTimeout ? () => setTimeout(fn, Config.setTimeoutDelay) : () => requestAnimationFrame(fn)
@@ -29,35 +31,38 @@ export function Game() {
   return g
 }
 
-export function start(g) {
+export function run(g) {
   resize()
   show(g.spinner)
-  g.listeners[2] = [window, 'resize', resize]
-  preload(onAssets.bind(null, g))
+  preload(onPreload.bind(null, g))
 }
 
-export function play(g) {
-  pause(g, false)
-}
-
-export function pause(g, p = true) {
-  g.pause = p
-  !p && animate(g)
-}
-
-function onAssets(g) {
-  g.listeners[0] = [g.srcBtn, 'click', onSrc]
-  ons(g.listeners)
-  createObjs()
-  hide([g.spinner])
-  show([g.contentEl, g.srcBtn])
-  playSound(Config.sounds.music)
-  Config.fullscreen && fullscreen()
-  play(g)
+export function play(g, p = true) {
+  g.pause = !p
+  p && animate(g)
 }
 
 function onSrc() {
   location = Config.src
+}
+
+function onPreload(g) {
+  g.listeners[0] = [window, 'resize', resize]
+  g.listeners[1] = [g.srcBtn, 'click', onSrc]
+  g.listeners[2] = [g.runBtn, 'click', onPlay.bind(null, g)]
+  ons(g.listeners)
+  clear()
+  show(g.runBtn)
+  hide([g.spinner, g.canvas])
+}
+
+function onPlay(g) {
+  createObjs()
+  hide(g.runBtn)
+  show([g.srcBtn, g.canvas])
+  playSound(Config.sounds.music)
+  Config.fullscreen && fullscreen()
+  play(g)
 }
 
 function createObjs() {
@@ -78,7 +83,7 @@ function animate(g) {
 }
 
 function draw() {
-  Shared.ctx.clearRect(0, 0, Config.width, Config.height)
+  clear()
   Shared.objs.forEach(o => o.draw(o.o))
 }
 

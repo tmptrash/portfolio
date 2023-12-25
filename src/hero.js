@@ -1,10 +1,8 @@
 import Config from './config'
 import Shared from './shared'
-import { bind, unbind, LEFT, RIGHT, picked, fire, inWater } from './utils'
-import { Sprite, draw as drawSprite, update as updateSprite, setImg } from './sprite'
+import { bind, unbind, LEFT, RIGHT, fire } from './utils'
+import { Sprite, draw as drawSprite, update as updateSprite } from './sprite'
 import { play } from './sounds'
-
-const HIT_DELAY = 150
 
 export function Hero() {
   const hero = {
@@ -33,7 +31,7 @@ export function update(h) {
 
   // walk: x += (t - h.t) * Config.stepSpeed * h.dir
   if (h.pressed.d || h.pressed.a) {
-    updateX(h, s.x + (t - h.t) * h.stepSpeed * h.dir)
+    fire('offs', (t - h.t) * h.stepSpeed * h.dir)
     h.stepSpeed = Config.stepSpeed
     s.img = s.imgs[`walk${side(h)}`]
     if (h.lendBefore) {
@@ -43,7 +41,7 @@ export function update(h) {
   }
 
   // idle
-  !h.pressed.d && !h.pressed.a && !h.climb && (s.img = s.imgs[`idle${side(h)}`])
+  !h.pressed.d && !h.pressed.a && !h.climb && (s.img = s.imgs.idleRight)
 
   updateScreen(h)
   updateSprite(s)
@@ -61,16 +59,6 @@ function rebind(h) {
   h.handlers = bind(keyCfg)
 }
 
-function updateX(hero, newX) {
-  const s = hero.sprite
-  let diff = newX - s.x
-  const left = diff < 0
-  s.x += diff
-  if (s.x < s.width) s.x = s.width
-  // TODO: move it to config
-  if (s.x > 1024) s.x = 1024
-}
-
 function updateScreen(h) {
   const s = h.sprite
   // TODO:
@@ -79,13 +67,11 @@ function updateScreen(h) {
     // Shared.offsX += Config.width
     // s.x = -s.width / 2
     // updateObjs(r, room())
-    // fire('change-room')
   } else if (s.x + s.width < 0) {
     // const r = room()
     // Shared.offsX -= Config.width
     // s.x = Config.width - s.width / 2
     // updateObjs(r, room())
-    // fire('change-room')
   }
 }
 

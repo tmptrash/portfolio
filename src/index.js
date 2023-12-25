@@ -1,4 +1,4 @@
 import './css/index.css'
-import { Game, start } from './game'
+import { Game, run } from './game'
 
-start(Game())
+run(Game())

@@ -1,8 +1,18 @@
 import Shared from './shared'
 
-import BackPath from '../img/back.png'
+import L0Path from '../img/l-0.png'
+import L1Path from '../img/l-1.png'
+import L2Path from '../img/l-2.png'
+import L3Path from '../img/l-3.png'
+import L4Path from '../img/l-4.png'
+import L5Path from '../img/l-5.png'
+import L6Path from '../img/l-6.png'
+import L7Path from '../img/l-7.png'
+import L8Path from '../img/l-8.png'
+import L9Path from '../img/l-9.png'
+import L10Path from '../img/l-10.png'
+import L11Path from '../img/l-11.png'
 // hero
-import IdleLeftPath from '../img/idle-left-6.png'
 import IdleRightPath from '../img/idle-right-6.png'
 import WalkLeftPath from '../img/walk-left-8.png'
 import WalkRightPath from '../img/walk-right-8.png'
@@ -11,8 +21,18 @@ import Music from '../sound/music.mp3'
 import SoundSteps from '../sound/steps.mp3'
 
 export const ASSET_NAMES = {
-  'BackPath': BackPath,
-  'IdleLeftPath': IdleLeftPath,
+  'L0Path': L0Path,
+  'L1Path': L1Path,
+  'L2Path': L2Path,
+  'L3Path': L3Path,
+  'L4Path': L4Path,
+  'L5Path': L5Path,
+  'L6Path': L6Path,
+  'L7Path': L7Path,
+  'L8Path': L8Path,
+  'L9Path': L9Path,
+  'L10Path': L10Path,
+  'L11Path': L11Path,
   'IdleRightPath': IdleRightPath,
   'WalkLeftPath': WalkLeftPath,
   'WalkRightPath': WalkRightPath,
