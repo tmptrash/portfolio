@@ -4,7 +4,7 @@ import { Sprite, draw as drawSprite, update as updateSprite } from './sprite'
 
 export function Level() {
   return {
-    sprite: Sprite(...Config.back, onLevelLoad)
+    sprite: Sprite(...Config.back)
   }
 }
 
@@ -14,9 +14,4 @@ export function draw(level) {
 
 export function update(level) {
   updateSprite(level.sprite)
-}
-
-function onLevelLoad(img) {
-  Config.hSprites = img.width / Config.spriteSize
-  Config.vSprites = img.height / Config.spriteSize
 }

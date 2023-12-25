@@ -107,11 +107,6 @@ export function findObjIdxById(id) {
 
 export function fn() {}
 
-export function reloaded() {
-  const u = new URL(location.href)
-  return u.searchParams.has('c')
-}
-
 export function touch(s, s1, offs = 0) {
   return (
     s.x + offs <= (s1.x + s1.width - offs)  &&

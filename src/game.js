@@ -2,22 +2,19 @@ import Shared from './shared'
 import Config from './config'
 import { Hero, draw as drawHero, update as updateHero } from './hero'
 import { Level, draw as drawLevel, update as updateLevel } from './level'
-import { el, ons, findObjById, loadText, addObj, resize, show, hide, reloaded, fullscreen } from './utils'
+import { el, ons, findObjById, loadText, addObj, resize, show, hide, fullscreen } from './utils'
 import { Sounds, play as playSound, stop as stopSound } from './sounds'
 import { preload } from './assets'
 
 export function Game() {
   const g = {
-    stopped: false,
     pause: false,
     animateFn: null,
     listeners: Array(1),
 
     spinner: el(Config.spinnerQuery),
     srcBtn: el(Config.srcQuery),
-    contentEl: el(Config.contentQuery),
-    vol: el(Config.volumeQuery),
-    volLabel: el(Config.volumeLabelQuery),
+    contentEl: el(Config.contentQuery)
   }
   const fn = animate.bind(null, g)
   g.animateFn = Config.useSetTimeout ? () => setTimeout(fn, Config.setTimeoutDelay) : () => requestAnimationFrame(fn)
@@ -40,7 +37,6 @@ export function start(g) {
 }
 
 export function play(g) {
-  playSound(Config.sounds.Music)
   pause(g, false)
 }
 
@@ -52,24 +48,16 @@ export function pause(g, p = true) {
 function onAssets(g) {
   g.listeners[0] = [g.srcBtn, 'click', onSrc]
   ons(g.listeners)
-  hide(g.spinner)
-  !reloaded() && show([g.srcBtn])
   createObjs()
-  reloaded() && onPlay(g, true)
+  hide([g.spinner])
+  show([g.contentEl, g.srcBtn])
+  playSound(Config.sounds.music)
+  Config.fullscreen && fullscreen()
+  play(g)
 }
 
 function onSrc() {
   location = Config.src
-}
-
-function onPlay(n, manually = false) {
-  show([n.contentEl, n.vol, n.volLabel])
-  hide([n.settingsEl, n.srcBtn])
-  play(n.game)
-  stopSound(Config.sounds.menu)
-  stopSound(Config.sounds.Music)
-  Config.fullscreen && !manually && fullscreen()
-  fire('play')
 }
 
 function createObjs() {

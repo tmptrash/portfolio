@@ -64,7 +64,6 @@ function rebind(h) {
 function updateX(hero, newX) {
   const s = hero.sprite
   let diff = newX - s.x
-  Math.abs(diff) > Config.spriteSize && (diff = (Config.spriteSize - 1) * Math.sign(diff))
   const left = diff < 0
   s.x += diff
   if (s.x < s.width) s.x = s.width

@@ -17,12 +17,12 @@ div.content {
   flex-wrap: nowrap;
 }
 div.footer { display: flex; justify-content: center }
-button.src {
+button.src, button.run {
   cursor: pointer;
   border: none;
   border-radius: 8px;
-  background-color: #4e4848;
-  color: #8f8f8f;
+  background-color: #df7126;
+  color: #000;
 }
 .spin {
   display: inline-block;
