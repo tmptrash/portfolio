@@ -1,7 +1,7 @@
 import Shared from './shared'
 import Config from './config'
 import { Sprite, draw as drawSprite, update as updateSprite } from './sprite'
-import { arr, text } from './utils'
+import { arr } from './utils'
 
 export function Level() {
   const l = {
@@ -17,8 +17,6 @@ export function Level() {
 
 export function draw(l) {
   l.sprites.forEach((s, i) => drawSprite(s, l.offsX[i], Shared.offsY))
-
-  text(l.offsX[0], 500, 30)
 }
 
 export function update(l) {

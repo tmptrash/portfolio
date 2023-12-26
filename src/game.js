@@ -1,6 +1,6 @@
 import Shared from './shared'
 import Config from './config'
-import { Hero, draw as drawHero, update as updateHero } from './hero'
+import { Me, draw as drawMe, update as updateMe } from './me'
 import { Level, draw as drawLevel, update as updateLevel } from './level'
 import { el, ons, findObjById, loadText, addObj, resize, show, hide, fullscreen, clear } from './utils'
 import { Sounds, play as playSound } from './sounds'
@@ -60,7 +60,7 @@ function onPlay(g) {
   createObjs()
   hide(g.runBtn)
   show([g.srcBtn, g.canvas])
-  playSound(Config.sounds.music)
+  playSound(Config.sounds.forest)
   Config.fullscreen && fullscreen()
   play(g)
 }
@@ -71,8 +71,8 @@ function createObjs() {
   // Static items. Order is important!
   Shared.objs = []
   addObj({ draw: drawLevel, update: updateLevel, o: Level() })
-  addObj({ draw: drawHero,  update: updateHero,  o: Hero(), id: Config.heroId })
-  Shared.hero = findObjById(Config.heroId)
+  addObj({ draw: drawMe,  update: updateMe,  o: Me(), id: Config.meId })
+  Shared.me = findObjById(Config.meId)
 }
 
 function animate(g) {

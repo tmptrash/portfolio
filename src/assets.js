@@ -12,13 +12,12 @@ import L8Path from '../img/l-8.png'
 import L9Path from '../img/l-9.png'
 import L10Path from '../img/l-10.png'
 import L11Path from '../img/l-11.png'
-// hero
+// me
 import IdleRightPath from '../img/idle-right-6.png'
 import WalkLeftPath from '../img/walk-left-8.png'
 import WalkRightPath from '../img/walk-right-8.png'
 // sounds
-import Music from '../sound/music.mp3'
-import SoundSteps from '../sound/steps.mp3'
+import SoundForest from '../sound/forest.mp3'
 
 export const ASSET_NAMES = {
   'L0Path': L0Path,
@@ -36,8 +35,7 @@ export const ASSET_NAMES = {
   'IdleRightPath': IdleRightPath,
   'WalkLeftPath': WalkLeftPath,
   'WalkRightPath': WalkRightPath,
-  'Music': Music,
-  'SoundSteps': SoundSteps
+  'SoundForest': SoundForest
 }
 
 export const ASSETS = {}

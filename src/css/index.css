@@ -1,5 +1,8 @@
 html { height: 100% }
-body canvas { image-rendering: pixelated }
+body canvas {
+  image-rendering: pixelated;
+  border-radius: 10px;
+}
 body {
   background-color: black;
   margin: 0;
@@ -17,14 +20,20 @@ div.content {
   flex-direction: column;
   flex-wrap: nowrap;
 }
-div.footer { display: flex; justify-content: center }
+div.footer {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
 button.src, button.run {
   cursor: pointer;
   border: none;
-  border-radius: 3px;
+  border-radius: 8px;
   background-color: #df7126;
   color: #000;
   margin-top: 10px;
+  width: 100px;
+  height: 30px;
 }
 .spin {
   display: inline-block;

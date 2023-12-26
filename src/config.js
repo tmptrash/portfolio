@@ -20,7 +20,7 @@ export default Config = {
   ver: 'v0.1',
   src: 'https://github.com/tmptrash/portfolio',
   canvasQuery: '#canvas',
-  heroId: 'hero',
+  meId: 'me',
   srcQuery: '.src',
   runQuery: '.run',
   contentQuery: '.content',
@@ -44,7 +44,7 @@ export default Config = {
   textSpeed: .009,
   scriptsPos: 3,
 
-  // hero related
+  // me related
   stepSpeed: .15,
 
   // keys
@@ -56,12 +56,11 @@ export default Config = {
 
   // audio
   sounds: {
-    music: A.Music,
-    steps: A.SoundSteps
+    forest: A.SoundForest
   },
 
   // sprites
-  hero: [{ x: 128, y: 645 }, {
+  me: [{ x: 128, y: 645 }, {
     idleRight: [A.IdleRightPath, 6, 260],
     walkLeft: [A.WalkLeftPath, 8, 60],
     walkRight: [A.WalkRightPath, 8, 60]

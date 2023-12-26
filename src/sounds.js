@@ -15,7 +15,6 @@ export function Sounds() {
 }
 
 export function play(a) {
-  a.volume = Shared.volume
   a.play()
 }
 
