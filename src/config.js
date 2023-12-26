@@ -75,6 +75,14 @@ export const Msgs = {
     'Stack    : JS/svn/YUICompressor/Jasmine/phantomJS/Cocumber',
     'Position : Senior developer',
     'Team Size: 15'
+  ],
+  p6: [
+    'WEB portal for high schools in USA.  Prevents drop out of students  in',
+    'schools. We used self made JS framework at that time & flex for charts',
+    '',
+    'Stack    : ExtJS3/Jasmine/Flex',
+    'Position : Mid developer',
+    'Team Size: 12'
   ]
 }
 

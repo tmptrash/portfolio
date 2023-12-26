@@ -12,6 +12,7 @@ export function Texts() {
       ['p3', '[ Healthcare portal ]', 1750, 3520, w],
       ['p4', '[ Healthcare app ]', 2560, 4100, w],
       ['p5', '[ Internet security app ]', 3300, 4800, w],
+      ['p6', '[ High school students app ]', 4050, 5700, w],
     ]
   }
 }
