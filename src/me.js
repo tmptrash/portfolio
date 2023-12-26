@@ -2,7 +2,6 @@ import Config from './config'
 import Shared from './shared'
 import { bind, unbind, LEFT, RIGHT, fire } from './utils'
 import { Sprite, draw as drawSprite, update as updateSprite } from './sprite'
-import { play } from './sounds'
 
 export function Me() {
   const me = {

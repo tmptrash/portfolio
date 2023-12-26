@@ -34,6 +34,7 @@ button.src, button.run {
   margin-top: 10px;
   width: 100px;
   height: 30px;
+  font-family: 'Ubuntu Mono', monospace;
 }
 .spin {
   display: inline-block;

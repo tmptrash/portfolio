@@ -21,11 +21,13 @@ export function draw(l) {
 
 export function update(l) {
   const w = Config.width
+  const last = l.offsX.length - 1
   l.sprites.forEach((s, i) => {
     if (l.offsX[i] < 0) l.pages[i] ? (l.pages[i]--, l.offsX[i] = w * 2 - 1) : l.offsX[i] = 0
     if (l.offsX[i] + w > Config.backWidth) l.offsX[i] = 0, l.pages[i]++
     updateSprite(s)
   })
+  Shared.offsX = l.offsX[last] + l.pages[last] * w * 2
 }
 
 function onOffs(l, param) {

@@ -157,15 +157,17 @@ export function css(e, attr, v) {
   else e.style[attr] = v
 }
 
-export function text(t, x, y, font, style = '#ccc') {
-  Shared.ctx.fillStyle = style
-  Shared.ctx.font = font
-  Shared.ctx.fillText(t, x, y)
+export function text(t, x, y, font = Config.textFont, style = Config.frontColor) {
+  if (Array.isArray(t)) {
+    t.forEach((s, i) => txt(s, x, y + i * 30, font, style))
+    return
+  }
+  txt(t.toString(), x, y, font, style)
 }
 
 export function loadText() {
   clear()
-  Shared.ctx.font = Config.frontFont
+  Shared.ctx.font = Config.textFont
   Shared.ctx.fillText(Msgs.loading, Config.width / 2 - 65, Config.height / 2)
 }
 
@@ -197,4 +199,10 @@ function addListeners(d) {
 // TODO: use it
 function isChrome() {
   return /Chrome/.test(navigator.userAgent)
+}
+
+function txt(t, x, y, font, style) {
+  Shared.ctx.fillStyle = style
+  Shared.ctx.font = font
+  Shared.ctx.fillText(t, x, y)
 }
