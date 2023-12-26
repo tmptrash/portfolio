@@ -10,6 +10,8 @@ export function Texts() {
       ['p1', '[ US Crypto Exchange platform ]', 120, 1750, w],
       ['p2', '[ Retail WEB Application ]', 900, 2500, w],
       ['p3', '[ Healthcare portal ]', 1750, 3520, w],
+      ['p4', '[ Healthcare app ]', 2560, 4100, w],
+      ['p5', '[ Internet security app ]', 3300, 4800, w],
     ]
   }
 }

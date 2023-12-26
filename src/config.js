@@ -53,9 +53,28 @@ export const Msgs = {
     'utilized  a  microservices architecture,  various  libraries,  and',
     'numerous subprojects.',
     '',
-    'Stack    : NG13/bootstrap/calendar.io/primeng/scss/git/Jenkins/sonar cube',
+    'Stack    : NG13/bootstrap/calendar.io/primeng/scss/git/Jenkins/sonarcube',
     'Position : Technical Leader',
     'Team Size: 40'
+  ],
+  p4: [
+    'An application for a healthcare company. The application worked',
+    'with numerous types of fields, for which a custom parser and  a',
+    'set of rules with complex checks were developed.',
+    '',
+    'Stack    : NG12/bootstrap/primeng/scss/git',
+    'Position : Technical Leader',
+    'Team Size: 4'
+  ],
+  p5: [
+    'Providing new application-level security functionality combined',
+    'with  user awareness  and inbound/outbound  content  inspection',
+    'capabilities,  our scalable  NGIPS  dynamically  protects  your',
+    'applications,  network, and data from new and advanced threats.',
+    '',
+    'Stack    : JS/svn/YUICompressor/Jasmine/phantomJS/Cocumber',
+    'Position : Senior developer',
+    'Team Size: 15'
   ]
 }
 
