@@ -9,6 +9,7 @@ export function Texts() {
       ['hi', '[ About ]', 0, 900, 350],
       ['p1', '[ US Crypto Exchange platform ]', 120, 1750, w],
       ['p2', '[ Retail WEB Application ]', 900, 2500, w],
+      ['p3', '[ Healthcare portal ]', 1750, 3520, w],
     ]
   }
 }

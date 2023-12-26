@@ -45,6 +45,17 @@ export const Msgs = {
     'Stack    : NG.JS/jQuery/_/HTML5/Bootstrap/REST/Ajax/SVN/Jasmine/N13',
     'Position : Technical Leader',
     'Team Size: 4 - 12'
+  ],
+  p3: [
+    'The web portal of a large American company  specializing in kidney',
+    'diseases. The site was used by the company\'s doctors and patients',
+    'for  prescribing medications  and  making  diagnoses.  The project',
+    'utilized  a  microservices architecture,  various  libraries,  and',
+    'numerous subprojects.',
+    '',
+    'Stack    : NG13/bootstrap/calendar.io/primeng/scss/git/Jenkins/sonar cube',
+    'Position : Technical Leader',
+    'Team Size: 40'
   ]
 }
 
