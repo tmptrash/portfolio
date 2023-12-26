@@ -168,7 +168,7 @@ export function text(t, x, y, font = Config.textFont, style = Config.frontColor)
 export function loadText() {
   clear()
   Shared.ctx.font = Config.textFont
-  Shared.ctx.fillText(Msgs.loading, Config.width / 2 - 65, Config.height / 2)
+  Shared.ctx.fillText(Msgs.loading, Config.width / 2 - 105, Config.height / 2)
 }
 
 export function resize() {
