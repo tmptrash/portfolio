@@ -96,9 +96,11 @@ export default Config = {
   runQuery: '.run',
   contentQuery: '.content',
   spinnerQuery: '.spin',
+  linksDiv: 'div.pages',
   fullscreenQuery: '#fullscreen',
   frontColor: '#fff',
   textFont: '18px Ubuntu Mono, monospace',
+  prjColor: '#113333',
 
   // game related
   fullscreen: false,

@@ -1,20 +1,25 @@
 import Config from './config'
 import Shared from './shared'
-import { text, msg } from './utils'
+import { text, msg, on, el, fire } from './utils'
+
+const VIEW_OFFS = 765
 
 export function Texts() {
   const w = Config.width
-  return {
+  const t = {
     texts: [
       ['hi', '[ About ]', 0, 900, 350],
       ['p1', '[ US Crypto Exchange platform ]', 120, 1750, w],
       ['p2', '[ Retail WEB Application ]', 900, 2500, w],
       ['p3', '[ Healthcare portal ]', 1750, 3520, w],
-      ['p4', '[ Healthcare app ]', 2560, 4100, w],
-      ['p5', '[ Internet security app ]', 3300, 4800, w],
-      ['p6', '[ High school students app ]', 4050, 5700, w],
+      ['p4', '[ Healthcare app ]', 2565, 4105, w],
+      ['p5', '[ Internet security app ]', 3355, 4855, w],
+      ['p6', '[ High school students app ]', 4155, 5855, w],
     ]
   }
+  on(el(Config.linksDiv), 'click', onProject.bind(null, t))
+
+  return t
 }
 
 export function draw(t) {
@@ -26,11 +31,21 @@ export function draw(t) {
     const line = texts[i]
     if (offs >= line[2] && offs <= line[3]) {
       text(msg(line[0]), line[4] + line[2] - offs, 250)
-      text(line[1], line[4] + line[2] - offs, 160, Config.textFont, '#113333')
+      text(line[1], line[4] + line[2] - offs, 160, Config.textFont, Config.prjColor)
     }
   }
 
   text(offs.toFixed(2), 140, 40)
 }
 
-export function update() {}
+function onProject(t, e) {
+  const p = e.target.innerText
+  const l = t.texts.length
+  for (let i = 0; i < l; i++) {
+    const line = t.texts[i]
+    if (line[0] === p) {
+      fire('offs', !line[2] ? 0 : line[2] + VIEW_OFFS)
+      break
+    }
+  }
+}

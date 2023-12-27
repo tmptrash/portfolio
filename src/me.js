@@ -29,7 +29,7 @@ export function update(me) {
 
   // walk: x += (t - h.t) * Config.stepSpeed * h.dir
   if (me.pressed.d || me.pressed.a) {
-    fire('offs', (t - me.t) * me.stepSpeed * me.dir)
+    fire('step', (t - me.t) * me.stepSpeed * me.dir)
     me.stepSpeed = Config.stepSpeed
     s.img = s.imgs[`walk${side(me)}`]
   }

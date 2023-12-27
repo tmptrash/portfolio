@@ -22,7 +22,7 @@ div.content {
 }
 div.footer {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   width: 100%;
 }
 button.src, button.run {
@@ -36,6 +36,16 @@ button.src, button.run {
   height: 30px;
   font-family: 'Ubuntu Mono', monospace;
 }
+div.pages {
+  padding-top: 16px;
+  margin-right: 30px;
+}
+a {
+  font-family: 'Ubuntu Mono', monospace;
+  text-decoration: none;
+  color: #ccc;
+  margin-right: 15px;
+}
 .spin {
   display: inline-block;
   width: 20px;
@@ -45,6 +55,11 @@ button.src, button.run {
   border-top-color: #fff;
   animation: spin 1s ease-in-out infinite;
   -webkit-animation: spinner 1s ease-in-out infinite;
+}
+.title {
+  font-family: 'Ubuntu Mono', monospace;
+  color: #df7126;
+  margin-right: 8px;
 }
 .mt10 {
   margin-top: 10px;
