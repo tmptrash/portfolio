@@ -95,7 +95,6 @@ export default Config = {
   srcQuery: '.src',
   runQuery: '.run',
   contentQuery: '.content',
-  spinnerQuery: '.spin',
   linksDiv: 'div.pages',
   fullscreenQuery: '#fullscreen',
   frontColor: '#fff',

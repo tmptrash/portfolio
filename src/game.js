@@ -14,11 +14,11 @@ export function Game() {
     animateFn: null,
     listeners: Array(3),
 
-    spinner: el(Config.spinnerQuery),
     srcBtn: el(Config.srcQuery),
     runBtn: el(Config.runQuery),
     contentEl: el(Config.contentQuery),
-    canvas: el(Config.canvasQuery)
+    canvas: el(Config.canvasQuery),
+    pages: el(Config.linksDiv),
   }
   const fn = animate.bind(null, g)
   g.animateFn = Config.useSetTimeout ? () => setTimeout(fn, Config.setTimeoutDelay) : () => requestAnimationFrame(fn)
@@ -35,7 +35,6 @@ export function Game() {
 
 export function run(g) {
   resize()
-  show(g.spinner)
   preload(onPreload.bind(null, g))
 }
 
@@ -55,13 +54,13 @@ function onPreload(g) {
   ons(g.listeners)
   clear()
   show(g.runBtn)
-  hide([g.spinner, g.canvas])
+  hide([g.canvas, g.pages])
 }
 
 function onPlay(g) {
   createObjs()
   hide(g.runBtn)
-  show([g.srcBtn, g.canvas])
+  show([g.srcBtn, g.canvas, g.pages])
   playSound(Config.sounds.forest)
   Config.fullscreen && fullscreen()
   play(g)
