@@ -12,13 +12,14 @@ export function Game() {
   const g = {
     pause: false,
     animateFn: null,
-    listeners: Array(3),
+    listeners: Array(4),
 
-    srcBtn: el(Config.srcQuery),
+    srcLink: el(Config.srcQuery),
+    linkedinLink: el(Config.linkedinQuery),
     runBtn: el(Config.runQuery),
     contentEl: el(Config.contentQuery),
     canvas: el(Config.canvasQuery),
-    pages: el(Config.linksDiv),
+    pages: el(Config.linksDiv)
   }
   const fn = animate.bind(null, g)
   g.animateFn = Config.useSetTimeout ? () => setTimeout(fn, Config.setTimeoutDelay) : () => requestAnimationFrame(fn)
@@ -47,10 +48,15 @@ function onSrc() {
   location = Config.src
 }
 
+function onLinkedin() {
+  location = Config.linkedin
+}
+
 function onPreload(g) {
   g.listeners[0] = [window, 'resize', resize]
-  g.listeners[1] = [g.srcBtn, 'click', onSrc]
-  g.listeners[2] = [g.runBtn, 'click', onPlay.bind(null, g)]
+  g.listeners[1] = [g.srcLink, 'click', onSrc]
+  g.listeners[2] = [g.linkedinLink, 'click', onLinkedin]
+  g.listeners[3] = [g.runBtn, 'click', onPlay.bind(null, g)]
   ons(g.listeners)
   clear()
   show(g.runBtn)
@@ -60,7 +66,7 @@ function onPreload(g) {
 function onPlay(g) {
   createObjs()
   hide(g.runBtn)
-  show([g.srcBtn, g.canvas, g.pages])
+  show([g.srcLink, g.linkedinLink, g.canvas, g.pages])
   playSound(Config.sounds.forest)
   Config.fullscreen && fullscreen()
   play(g)

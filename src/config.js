@@ -90,9 +90,11 @@ export default Config = {
   // html & css & ids
   ver: 'v0.1',
   src: 'https://github.com/tmptrash/portfolio',
+  linkedin: 'https://www.linkedin.com/in/flatline-jack',
   canvasQuery: '#canvas',
   meId: 'me',
-  srcQuery: '.src',
+  srcQuery: 'a.src',
+  linkedinQuery: 'a.linkedin',
   runQuery: '.run',
   contentQuery: '.content',
   linksDiv: 'div.pages',

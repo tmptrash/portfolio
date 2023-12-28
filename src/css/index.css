@@ -25,7 +25,7 @@ div.footer {
   justify-content: space-between;
   width: 100%;
 }
-button.src, button.run {
+button.run {
   cursor: pointer;
   border: none;
   border-radius: 8px;
@@ -36,20 +36,25 @@ button.src, button.run {
   height: 30px;
   font-family: 'Ubuntu Mono', monospace;
 }
-div.pages {
+div.links, div.pages {
   padding-top: 16px;
+}
+div.pages {
   margin-right: 30px;
 }
 a {
   font-family: 'Ubuntu Mono', monospace;
   text-decoration: none;
-  color: #ccc;
-  margin-right: 15px;
+  color: #df7126;
+  margin-left: 15px;
+  cursor: pointer;
+}
+a.linkedin {
+  margin-left: 20px;
 }
 .title {
   font-family: 'Ubuntu Mono', monospace;
-  color: #df7126;
-  margin-right: 8px;
+  color: #ccc;
 }
 .mt10 {
   margin-top: 10px;
