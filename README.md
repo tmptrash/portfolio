@@ -1,5 +1,5 @@
 # portfolio
-My portfolio project as WEB Developer
+My artistic portfolio project as a WEB Developer
 
-# deployed
-[portfolio](dima-tarasenko.netlify.com)
+## deployed
+[look](dima-tarasenko.netlify.com)
