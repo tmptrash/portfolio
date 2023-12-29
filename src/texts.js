@@ -28,12 +28,17 @@ export function draw(t) {
   const offs = Shared.offsX
   const texts = t.texts
   const l = texts.length
+  const font = Config.textFont
+  const col = Config.prjColor
   
   for (let i = 0; i < l; i++) {
     const line = texts[i]
     if (offs >= line[2] && offs <= line[3]) {
-      text(msg(line[0]), line[4] + line[2] - offs, 250)
-      text(line[1], line[4] + line[2] - offs, 160, Config.textFont, Config.prjColor)
+      text(line[1], line[4] + line[2] - offs, 160, font, col)
+      text(msg(line[0]), line[4] + line[2] - offs, 250, font, col, (s, x, y, idx) => {
+        const len = msg(line[0]).length
+        text(s, x, y, font, (i && len - idx < 4) ? Config.footerColor : Config.frontColor)
+      })
     }
   }
 

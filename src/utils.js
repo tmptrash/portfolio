@@ -157,9 +157,9 @@ export function css(e, attr, v) {
   else e.style[attr] = v
 }
 
-export function text(t, x, y, font = Config.textFont, style = Config.frontColor) {
+export function text(t, x, y, font = Config.textFont, style = Config.frontColor, cb) {
   if (Array.isArray(t)) {
-    t.forEach((s, i) => txt(s, x, y + i * 30, font, style))
+    t.forEach((s, i) => cb ? cb(s, x, y + i * 30, i, font, style) : txt(s, x, y + i * 30, font, style))
     return
   }
   txt(t.toString(), x, y, font, style)
