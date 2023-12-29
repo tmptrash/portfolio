@@ -2,7 +2,7 @@ import Shared from './shared'
 import Config from './config'
 import { Level, draw as drawLevel, update as updateLevel } from './level'
 import { Me, draw as drawMe, update as updateMe } from './me'
-import { Texts, draw as drawTexts } from './texts'
+import { Texts, draw as drawTexts, update as updateTexts } from './texts'
 import { Fps, draw as drawFps } from './fps'
 import { el, ons, findObjById, loadText, addObj, resize, show, hide, fullscreen, clear } from './utils'
 import { Sounds, play as playSound } from './sounds'
@@ -79,7 +79,7 @@ function createObjs() {
   Shared.objs = []
   addObj({ draw: drawLevel,  update: updateLevel, o: Level() })
   addObj({ draw: drawMe,     update: updateMe,    o: Me(), id: Config.meId })
-  addObj({ draw: drawTexts,  update: ()=>{},      o: Texts() })
+  addObj({ draw: drawTexts,  update: updateTexts, o: Texts() })
   addObj({ draw: drawFps,    update: ()=>{},      o: Fps() })
   Shared.me = findObjById(Config.meId)
 }

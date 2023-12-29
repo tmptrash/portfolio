@@ -22,7 +22,7 @@ export const Msgs = {
     'and  YouTube  presentations.  Passionate about Science,',
     'Algorithms,  AI, Front-end in general and browser games',
     '',
-    'Use A,D keys to see my portfolio...'
+    'Use A,D keys or links below to see my portfolio...'
   ],
   p1: [
     'The goal of the project was to create crypto currency portal',
@@ -100,6 +100,7 @@ export default Config = {
   linksDiv: 'div.pages',
   fullscreenQuery: '#fullscreen',
   frontColor: '#fff',
+  grayColor: '#ccc',
   textFont: '18px Ubuntu Mono, monospace',
   prjColor: '#113333',
 
@@ -133,6 +134,7 @@ export default Config = {
   },
 
   // sprites
+  photo: [{ x: 30, y: 100 }, A.PhotoPath],
   me: [{ x: 128, y: 645 }, {
     idleRight: [A.IdleRightPath, 6, 260],
     walkLeft: [A.WalkLeftPath, 8, 60],

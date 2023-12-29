@@ -1,6 +1,7 @@
 import Config from './config'
 import Shared from './shared'
 import { text, msg, on, el, fire } from './utils'
+import { Sprite, draw as drawSprite } from './sprite'
 
 const VIEW_OFFS = 765
 
@@ -15,7 +16,8 @@ export function Texts() {
       ['p4', '[ Healthcare app ]', 2565, 4105, w],
       ['p5', '[ Internet security app ]', 3355, 4855, w],
       ['p6', '[ High school students app ]', 4155, 5855, w],
-    ]
+    ],
+    photo: Sprite(...Config.photo)
   }
   on(el(Config.linksDiv), 'click', onProject.bind(null, t))
 
@@ -36,6 +38,17 @@ export function draw(t) {
   }
 
   text(offs.toFixed(2), 140, 40)
+  if (offs >= texts[0][2] && offs <= texts[0][3]) {
+    const img = t.photo
+    Shared.ctx.fillStyle = Config.grayColor
+    Shared.ctx.fillRect(img.x - 1, img.y - 1, img.width + 2, img.height + 2)
+    drawSprite(t.photo)
+  }
+}
+
+export function update(t) {
+  t.photo.x = 65 - Shared.offsX
+  t.photo.y = 238
 }
 
 function onProject(t, e) {

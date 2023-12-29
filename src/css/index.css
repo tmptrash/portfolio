@@ -37,7 +37,7 @@ button.run {
   font-family: 'Ubuntu Mono', monospace;
 }
 div.links, div.pages {
-  padding-top: 16px;
+  padding-top: 23px;
 }
 div.pages {
   margin-right: 30px;
@@ -55,15 +55,4 @@ a.linkedin {
 .title {
   font-family: 'Ubuntu Mono', monospace;
   color: #ccc;
-}
-.mt10 {
-  margin-top: 10px;
-}
-
-.mt20 {
-  margin-top: 20px;
-}
-
-.mt30 {
-  margin-top: 30px;
 }

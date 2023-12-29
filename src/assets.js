@@ -13,6 +13,7 @@ import L9Path from '../img/l-9.png'
 import L10Path from '../img/l-10.png'
 import L11Path from '../img/l-11.png'
 // me
+import PhotoPath from '../img/me.png'
 import IdleRightPath from '../img/idle-right-6.png'
 import WalkLeftPath from '../img/walk-left-8.png'
 import WalkRightPath from '../img/walk-right-8.png'
@@ -32,6 +33,7 @@ export const ASSET_NAMES = {
   'L9Path': L9Path,
   'L10Path': L10Path,
   'L11Path': L11Path,
+  'PhotoPath': PhotoPath,
   'IdleRightPath': IdleRightPath,
   'WalkLeftPath': WalkLeftPath,
   'WalkRightPath': WalkRightPath,
