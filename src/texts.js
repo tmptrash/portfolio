@@ -30,6 +30,7 @@ export function draw(t) {
   const l = texts.length
   const font = Config.textFont
   const col = Config.prjColor
+  const ftCol = Config.footerColor
   
   for (let i = 0; i < l; i++) {
     const line = texts[i]
@@ -37,7 +38,7 @@ export function draw(t) {
       text(line[1], line[4] + line[2] - offs, 160, font, col)
       text(msg(line[0]), line[4] + line[2] - offs, 250, font, col, (s, x, y, idx) => {
         const len = msg(line[0]).length
-        text(s, x, y, font, (i && len - idx < 4) ? Config.footerColor : Config.frontColor)
+        text(s, x, y, font, (i && len - idx < 4) ? ftCol : (!i && idx === len - 1 ? ftCol : Config.frontColor))
       })
     }
   }
