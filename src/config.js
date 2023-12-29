@@ -25,10 +25,10 @@ export const Msgs = {
     'Use A,D keys or links below to see my portfolio...'
   ],
   p1: [
-    'The  goal of the  project was to create crypto  currency portal',
-    'similar to Binance,  and mobile app for  professional  traders.',
+    'The  goal of the  project was  to create crypto  currency portal',
+    'similar to  Binance,  and mobile app for  professional  traders.',
     'What I did: Manage five dev teams & provide technical solutions;',
-    'Configure users authentication;  Code and Architecture  review;',
+    'Configure users  authentication;  Code and Architecture  review;',
     'Creation & support of branching strategy; Manual testing; Client',
     'negotiations; Coding; Project Processes development',
     '',
@@ -37,10 +37,10 @@ export const Msgs = {
     'Team size: 25'
   ],
   p2: [
-    'The web portal of a large American company  specializing in kidney',
-    'diseases. The site was used by the company\'s doctors and patients',
-    'for  prescribing medications  and  making  diagnoses.  The project',
-    'utilized  a  microservices architecture,  various  libraries,  and',
+    'The web portal of a  large American company  specializing in kidney',
+    'diseases.  The site was used by the company\'s  doctors and patients',
+    'for  prescribing  medications  and  making  diagnoses.  The project',
+    'utilized  a  microservices  architecture,  various  libraries,  and',
     'numerous subprojects. What I did: Manage WEB dev team; Code review;',
     'Client negotiations; Code Optiomizations; Support of old code; Test',
     'coverage; Builds stability; Coding',
@@ -67,7 +67,7 @@ export const Msgs = {
     'users  acting  in Vendor,  Super User  or Employee  roles, and/or in',
     'combinations of these roles or sub-roles.  Omni Retail application\’s',
     'User  Interface designed to  support concurrent  editing of multiple',
-    'document sections of multiple documents by multiple teams. What I did:',
+    'document  sections of  multiple documents by many teams.  What I did:',
     'Created JS OOP opensource library; Full project delivery from zero to',
     'production; Unit tests coverage; Managed 12 WEB developers; Created &',
     'supported apps architecture; Project process; Code optimizations;',
