@@ -14,7 +14,7 @@ export const Msgs = {
   keys: () => `left - ${fmt(Config.leftKey)}`,
   loading: 'Loading. Please wait...',
   hi: [
-    'Hi there!  My name is Dima & I am a software developer.',
+    'Hi there!  My name is Dima &  I am a software engineer.',
     'Specializes in WEB development - JS/TS, NG, React, ES6,',
     'Canvas 2D,  Redux,  Webpack, Jasmine, MUI and more.  In',
     'a past I worked with  C++, Julia, Rust &  related envs.',
