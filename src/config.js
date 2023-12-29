@@ -19,7 +19,7 @@ export const Msgs = {
     'Canvas 2D, Redux, Webpack, Jasmine, MUI and more. In',
     'a past I worked with C++, Julia, Rust & related envs.',
     'Active speaker in UI conferences, meetups, communities',
-    'and  YouTube presentations. Passionate about Science,',
+    'and YouTube presentations. Passionate about Science,',
     'Algorithms, AI, Front-end in general and browser games',
     '',
     'Use A,D keys or links below to see my portfolio...'
@@ -119,7 +119,7 @@ export default Config = {
   prjColor: '#113333',
 
   // game related
-  fullscreen: false,
+  fullscreen: true,
   useSetTimeout: false,
   setTimeoutDelay: 7,
   width: WIDTH,
