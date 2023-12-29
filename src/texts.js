@@ -13,9 +13,9 @@ export function Texts() {
       ['p1', '[ Crypto Exchange platform in the USA ]', 120, 1750, w],
       ['p2', '[ Retail WEB Application ]', 900, 2500, w],
       ['p3', '[ Healthcare portal ]', 1750, 3520, w],
-      ['p4', '[ Healthcare app ]', 2565, 4105, w],
-      ['p5', '[ Internet security app ]', 3355, 4855, w],
-      ['p6', '[ High school students app ]', 4155, 5855, w],
+      ['p4', '[ Healthcare WEB app ]', 2565, 4105, w],
+      ['p5', '[ Internet security WEB app ]', 3355, 4855, w],
+      ['p6', '[ High school students WEB app ]', 4155, 5855, w],
     ],
     photo: Sprite(...Config.photo)
   }
