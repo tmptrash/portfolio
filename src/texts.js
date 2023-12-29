@@ -37,7 +37,7 @@ export function draw(t) {
     }
   }
 
-  text(offs.toFixed(2), 140, 40)
+  //text(offs.toFixed(2), 140, 40)
   if (offs >= texts[0][2] && offs <= texts[0][3]) {
     const img = t.photo
     Shared.ctx.fillStyle = Config.grayColor
