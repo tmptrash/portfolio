@@ -15,9 +15,17 @@ export function Texts() {
       ['p3', '[ Healthcare portal ]', 1750, 3520, w],
       ['p4', '[ Healthcare WEB app ]', 2565, 4105, w],
       ['p5', '[ Internet security WEB app ]', 3355, 4855, w],
-      ['p6', '[ High school students WEB app ]', 4155, 5855, w],
-      ['p7', '[ Mary Brave! browser opensource game ]', 4955, 6855, w],
-      ['p8', '[ irma - opensource digital organisms eco system ]', 5800, 7855, w]
+      ['p6', '[ High school students WEB app ]', 4155, 5750, w],
+      ['p7', '[ Mary Brave! browser opensource game ]', 4955, 6557, w],
+      ['p8', '[ irma - opensource digital organisms eco system ]', 5800, 7444, w],
+      ['p9', '[ SimplexNoise - opensource library ]', 6700, 8320, w],
+      ['p10','[ N13 - opensource JS OOP library ]', 7550, 9180, w],
+      ['p11','[ Windows AntiVirus ]', 8450, 10000, w],
+      ['p12','[ HEX Language & It\'s Interpreter ]', 9300, 10950, w],
+      ['p13','[ Camel Disc Catalog - disks organizer ]', 10200, 11885, w],
+      ['p14','[ HTML Viewer for DOS - offline text browser ]', 11100, 12790, w],
+      ['hire','', 12900, 14260, w],
+      ['please','', 14240, 15600, w]
     ],
     photo: Sprite(...Config.photo)
   }
@@ -44,6 +52,8 @@ export function draw(t) {
       })
     }
   }
+
+  //text(Shared.offsX, 150, 35)
 
   if (offs >= texts[0][2] && offs <= texts[0][3]) {
     const img = t.photo

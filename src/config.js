@@ -123,7 +123,71 @@ export const Msgs = {
     'Stack    : Pure JS/CSS/Canvas 2D/Webpack',
     'Position : Core developer',
     'Team Size: 3'
-  ]
+  ],
+  p9: [
+    'Fast implementation of simplex noise algorithm using ES6. Based on the',
+    'source of Jonas Wagner. Added octaves, amplitude, scale, and distribution.',
+    'What I did: Coding',
+    '',
+    'Stack    : Pure JS/Canvas 2D',
+    'Position : Core developer',
+    'Team Size: 1'
+  ],
+  p10: [
+    'Really cute JavaScript OOP library - N13. I was inspired by ExtJS OOP way',
+    'and decided to write my own Open Source library for classes in JavaScript.',
+    'What I did: mixin classes with inheritance; static properties and methods',
+    'string namespaces; classic inheritance; class configuration; constructor',
+    'method (init()); super method calls (see callParent() method); mixin methods',
+    'calls (multiple inheritance); dependencies loading (RequireJS analog); other',
+    'libraries compatibility (BackboneJS, Angular, any...); simple utils',
+    '',
+    'Stack    : Pure JS',
+    'Position : Core developer',
+    'Team Size: 1'
+  ],
+  p11: [
+    'AntiVirus software for street terminals under Windows 2000. Project used a',
+    'white list approach to check if current process has an ability to run on',
+    'current device. What I did: using C++/C#/CPP/CLI I implemented low level',
+    'mechanism of controlling Windows processes.',
+    '',
+    'Stack    : C++/C#/CPP/CLI/.NET/svn/MSDN',
+    'Position : Developer',
+    'Team Size: 7'
+  ],
+  p12: [
+    'Creation of HEX-like low level language & it\'s interpreter for programming',
+    'credit cards in banks and gas stations of post USSR countries. What I did:',
+    'Interpreter implementation; Support of different card types; Support of magnet',
+    'line & chips; Developing related software',
+    '',
+    'Stack    : C++/perl/svn/MSDN/Win32 API/POS terminal software',
+    'Position : Developer',
+    'Team Size: 15'
+  ],
+  p13: [
+    'Camel Disc Catalog is a nice CD catalog software that generates a computer',
+    'database to keep track and find any disk in a snap. The program will automatically',
+    'index the structure of files and folders, record file names and create a disk',
+    'snapshot. What I did: Implementation of core functions: scanning, database saving,',
+    'app UI; Creation of project size with self made forum;',
+    '',
+    'Stack    : C++/svn/PHP/JavaScript/wxWidgets',
+    'Position : Developer',
+    'Team Size: 3'
+  ],
+  p14: [
+    'Fast and good looking Open Source html viewer for DOS. What I did: Implementation',
+    'of these features: Simple HTML preview in text mode; 80 Hz custom monitor rate;',
+    'HTML source viewer; Embedded font editor; Really tiny size (less then 50Kb)',
+    '',
+    'Stack    : C++/asm',
+    'Position : Developer',
+    'Team Size: 2'
+  ],
+  hire: ['', '', '', '', 'You\'ll hire me, won\'t you?', '', '', ''],
+  please: ['', '', '', '', 'Pleeeeeeease... (◕‿◕｡)', '', '', '']
 }
 
 export default Config = {
