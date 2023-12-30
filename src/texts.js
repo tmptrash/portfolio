@@ -38,12 +38,11 @@ export function draw(t) {
       text(line[1], line[4] + line[2] - offs, 160, font, col)
       text(msg(line[0]), line[4] + line[2] - offs, 250, font, col, (s, x, y, idx) => {
         const len = msg(line[0]).length
-        text(s, x, y, font, (i && len - idx < 4) ? ftCol : (!i && idx === len - 1 ? ftCol : Config.frontColor))
+        text(s, x, y, font, (i && len - idx < 4) ? ftCol : (!i && idx > len - 3 ? ftCol : Config.frontColor))
       })
     }
   }
 
-  //text(offs.toFixed(2), 140, 40)
   if (offs >= texts[0][2] && offs <= texts[0][3]) {
     const img = t.photo
     Shared.ctx.fillStyle = Config.grayColor

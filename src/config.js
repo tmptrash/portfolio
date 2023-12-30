@@ -22,7 +22,8 @@ export const Msgs = {
     'and YouTube channel. Passionate about Science, Algorithms,',
     'AI & ALife, WEB in general, Pure JS and browser games',
     '',
-    'Use A, D keys or links below to see my portfolio...'
+    'Use A, D buttons or just touch the screen on mobile device',
+    'to see my portfolio...'
   ],
   p1: [
     'The  goal of the project was to create crypto currency portal',
