@@ -1,6 +1,6 @@
 import Config from './config'
 import Shared from './shared'
-import { on, bind, unbind, LEFT, RIGHT, fire, isMobile } from './utils'
+import { el, on, bind, unbind, LEFT, RIGHT, fire, isMobile } from './utils'
 import { Sprite, draw as drawSprite, update as updateSprite } from './sprite'
 
 export function Me() {
@@ -46,9 +46,9 @@ function rebind(me) {
   me.pressed = { a: false, d: false, w: false }
   const keyCfg = { keydown: {}, keyup: {} }
   if (isMobile()) {
-    const doc = document
-    on(doc, 'touchstart', onTouchStart.bind(null, me))
-    on(doc, 'touchend', onTouchEnd.bind(null, me))
+    const canvas = el(Config.canvasQuery)
+    on(canvas, 'touchstart', onTouchStart.bind(null, me))
+    on(canvas, 'touchend', onTouchEnd.bind(null, me))
   } else {
     keyCfg.keydown[Config.leftKey]  = () => (me.pressed.a = true, me.dir = LEFT)
     keyCfg.keydown[Config.rightKey] = () => (me.pressed.d = true, me.dir = RIGHT)
