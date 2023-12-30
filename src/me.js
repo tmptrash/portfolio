@@ -62,6 +62,7 @@ function onTouchStart(me, e) {
   const center = window.innerWidth / 2
   if (e.changedTouches[0].clientX < center) me.pressed.a = true, me.dir = LEFT
   else me.pressed.d = true, me.dir = RIGHT
+  e.preventDefault()
 }
 
 function onTouchEnd(me, e) {

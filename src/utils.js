@@ -32,7 +32,7 @@ export function unbind(handlers) {
 }
 
 export function on(el, event, handler) {
-  el.addEventListener(event, handler)
+  el.addEventListener(event, handler, {passive: false})
 }
 
 export function ons(listeners) {
