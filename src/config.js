@@ -97,6 +97,32 @@ export const Msgs = {
     'Stack    : ExtJS3/Jasmine/Flex',
     'Position : Mid developer',
     'Team Size: 12'
+  ],
+  p7: [
+    'Embark on an epic journey through a mysterious underground cave as the',
+    'daring, red-haired heroine. Your mission is to uncover the secrets of',
+    'the labyrinth and unlock the hidden door using a mysterious key. But',
+    'beware, danger lurks at every turn. The cave is filled with venomous',
+    'insects, deadly predators, and other fiendish foes. What I did: Full',
+    'cycle development and delivery; Level design; Animation; Sounds & Music;',
+    'Scenario; Pixel Art;',
+    '',
+    'Stack    : Pure JS/CSS/Webpack',
+    'Position : Core developer',
+    'Team Size: 1'
+  ],
+  p8: [
+    'This is optimized 2D ecosystem with ability to run up to 10 000 agents',
+    '(organisms) and 100 000 molecules (matter and organism\'s food) in parallel.',
+    'It uses linear assembler-like language (LGP) as a DNA, which runs under self-',
+    'made VM. The purpose is to produce complex behavior of organisms based on',
+    'generated code. Such code is used as organism\'s "brain" and manages all his',
+    'life aspects. What I did: Language design; VM & debugger development; Unit',
+    'tests; Statistics & charts components development;',
+    '',
+    'Stack    : Pure JS/CSS/Canvas 2D/Webpack',
+    'Position : Core developer',
+    'Team Size: 3'
   ]
 }
 

@@ -16,6 +16,8 @@ export function Texts() {
       ['p4', '[ Healthcare WEB app ]', 2565, 4105, w],
       ['p5', '[ Internet security WEB app ]', 3355, 4855, w],
       ['p6', '[ High school students WEB app ]', 4155, 5855, w],
+      ['p7', '[ Mary Brave! browser opensource game ]', 4955, 6855, w],
+      ['p8', '[ irma - opensource digital organisms eco system ]', 5800, 7855, w]
     ],
     photo: Sprite(...Config.photo)
   }
