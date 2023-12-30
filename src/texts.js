@@ -67,4 +67,5 @@ function onProject(t, e) {
       break
     }
   }
+  e.preventDefault()
 }
