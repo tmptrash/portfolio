@@ -186,8 +186,9 @@ export const Msgs = {
     'Position : Developer',
     'Team Size: 2'
   ],
-  hire: ['', '', '', '', 'You\'ll hire me, won\'t you?', '', '', ''],
-  please: ['', '', '', '', 'Pleeeeeeease... (◕‿◕｡)', '', '', '']
+  end1: ['', '', '', '', 'You don\'t need to go so deep', '', '', ''],
+  end2: ['', '', '', '', 'There is nothing here...', '', '', ''],
+  end3: ['', '', '', '', 'Is your finger not tired?', '', '', '']
 }
 
 export default Config = {

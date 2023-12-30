@@ -24,8 +24,9 @@ export function Texts() {
       ['p12','[ HEX Language & It\'s Interpreter ]', 9300, 10950, w],
       ['p13','[ Camel Disc Catalog - disks organizer ]', 10200, 11885, w],
       ['p14','[ HTML Viewer for DOS - offline text browser ]', 11100, 12790, w],
-      ['hire','', 12900, 14260, w],
-      ['please','', 14240, 15600, w]
+      ['end1','', 12900, 14260, w],
+      ['end2','', 14240, 15600, w],
+      ['end3','', 23000, 24200, w]
     ],
     photo: Sprite(...Config.photo)
   }
