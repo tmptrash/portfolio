@@ -1,6 +1,6 @@
 import Config from './config'
 import Shared from './shared'
-import { bind, unbind, LEFT, RIGHT, fire } from './utils'
+import { on, bind, unbind, LEFT, RIGHT, fire, isMobile } from './utils'
 import { Sprite, draw as drawSprite, update as updateSprite } from './sprite'
 
 export function Me() {
@@ -45,11 +45,29 @@ function rebind(me) {
   unbind(me.handlers)
   me.pressed = { a: false, d: false, w: false }
   const keyCfg = { keydown: {}, keyup: {} }
-  keyCfg.keydown[Config.leftKey]  = () => (me.pressed.a = true, me.dir = LEFT)
-  keyCfg.keydown[Config.rightKey] = () => (me.pressed.d = true, me.dir = RIGHT)
-  keyCfg.keyup[Config.leftKey]    = () => (me.pressed.a = false, me.pressed.d && (me.dir = RIGHT))
-  keyCfg.keyup[Config.rightKey]   = () => (me.pressed.d = false, me.pressed.a && (me.dir = LEFT))
+  if (isMobile()) {
+    const doc = document
+    on(doc, 'touchstart', onTouchStart.bind(null, me))
+    on(doc, 'touchend', onTouchEnd.bind(null, me))
+  } else {
+    keyCfg.keydown[Config.leftKey]  = () => (me.pressed.a = true, me.dir = LEFT)
+    keyCfg.keydown[Config.rightKey] = () => (me.pressed.d = true, me.dir = RIGHT)
+    keyCfg.keyup[Config.leftKey]    = () => (me.pressed.a = false, me.pressed.d && (me.dir = RIGHT))
+    keyCfg.keyup[Config.rightKey]   = () => (me.pressed.d = false, me.pressed.a && (me.dir = LEFT))
+  }
   me.handlers = bind(keyCfg)
+}
+
+function onTouchStart(me, e) {
+  const center = window.innerWidth / 2
+  if (e.changedTouches[0].clientX < center) me.pressed.a = true, me.dir = LEFT
+  else me.pressed.d = true, me.dir = RIGHT
+}
+
+function onTouchEnd(me, e) {
+  const center = window.innerWidth / 2
+  if (e.changedTouches[0].clientX < center) me.pressed.a = false, me.pressed.d && (me.dir = RIGHT)
+  else me.pressed.d = false, me.pressed.a && (me.dir = LEFT)
 }
 
 function side(me) {

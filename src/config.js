@@ -17,12 +17,12 @@ export const Msgs = {
     'Hi there! My name is Dima & I am a software engineer.',
     'Specializes in WEB development - JS/TS, NG, React, ES6,',
     'Canvas 2D, Redux, Webpack, Jasmine, MUI and more. In',
-    'a past I worked with C++, Julia, Rust & related envs.',
+    'a past I worked with C/C++, Julia, Rust & related envs.',
     'Active speaker in UI conferences, meetups, communities',
-    'and YouTube presentations. Passionate about Science,',
-    'Algorithms, AI, Front-end in general and browser games',
+    'and YouTube channel. Passionate about Science, Algorithms,',
+    'AI & ALife, WEB in general, Pure JS and browser games',
     '',
-    'Use A,D keys or links below to see my portfolio...'
+    'Use A, D keys or links below to see my portfolio...'
   ],
   p1: [
     'The  goal of the project was to create crypto currency portal',

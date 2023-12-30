@@ -31,7 +31,7 @@ export function draw(t) {
   const font = Config.textFont
   const col = Config.prjColor
   const ftCol = Config.footerColor
-  
+
   for (let i = 0; i < l; i++) {
     const line = texts[i]
     if (offs >= line[2] && offs <= line[3]) {
