@@ -11,6 +11,7 @@ export function id() {
 
 export const Msgs = {
   loading: 'Loading. Please wait...',
+  assetsLoaded: 'All assets were loaded...',
   hi: [
     'Hi there! My name is Dima & I am a software engineer.',
     'Specializes in WEB development - JS/TS, NG, React, ES6,',

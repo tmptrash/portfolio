@@ -1,10 +1,10 @@
 import Shared from './shared'
-import Config from './config'
+import Config, { Msgs } from './config'
 import { Level, draw as drawLevel, update as updateLevel } from './level'
 import { Me, draw as drawMe, update as updateMe } from './me'
 import { Texts, draw as drawTexts, update as updateTexts } from './texts'
 import { Fps, draw as drawFps } from './fps'
-import { el, ons, fn, loadText, addObj, resize, show, hide, fullscreen, clear } from './utils'
+import { el, ons, text, fn, loadText, addObj, resize, show, hide, fullscreen, clear } from './utils'
 import { Sounds, play as playSound } from './sounds'
 import { preload } from './assets'
 
@@ -53,6 +53,8 @@ function onLinkedin() {
 }
 
 function onPreload(g) {
+  clear()
+  text(Msgs.assetsLoaded, Config.width / 2 - 105, Config.height / 2)
   g.listeners[0] = [window, 'resize', resize]
   g.listeners[1] = [g.srcLink, 'click', onSrc]
   g.listeners[2] = [g.linkedinLink, 'click', onLinkedin]
