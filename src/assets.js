@@ -55,6 +55,7 @@ export function preload(cb) {
     }
     Shared.assets++
     ASSETS[asset].src = asset
+    ASSETS[asset].load && ASSETS[asset].load()
   }
   wait(cb)
 }

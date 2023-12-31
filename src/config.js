@@ -3,11 +3,6 @@ import { ASSET_NAMES as A } from './assets'
 const WIDTH = 928
 const HEIGHT = 793
 let Config = null
-let uniqueId = 0
-
-export function id() {
-  return ++uniqueId
-}
 
 export const Msgs = {
   loading: 'Loading. Please wait...',
