@@ -10,8 +10,6 @@ export function id() {
 }
 
 export const Msgs = {
-  welcome: 'Welcome to my portfolio',
-  keys: () => `left - ${fmt(Config.leftKey)}`,
   loading: 'Loading. Please wait...',
   hi: [
     'Hi there! My name is Dima & I am a software engineer.',
@@ -260,10 +258,4 @@ export default Config = {
     [{ x: 0, y: 0 }, A.L1Path],
     [{ x: 0, y: 0 }, A.L0Path]
   ]
-}
-
-// TODO:
-function fmt(msg) {
-  if (msg.startsWith('Key')) return msg.substring(3)
-  return msg
 }

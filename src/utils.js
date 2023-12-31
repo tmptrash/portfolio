@@ -1,19 +1,11 @@
 import Config, { Msgs } from './config'
 import Shared from './shared'
 
-// TODO: review all funcs
 export const RIGHT =  1
 export const LEFT  = -1
-export const UP    = -1
-export const DOWN  = 1
 
 export function isArr(v) {
   return Array.isArray(v)
-}
-
-export function int(n) {
-  const i = Math.trunc(n)
-  return (n - i < .502) ? i : i + 1
 }
 
 export function bind(handlers) {
@@ -61,24 +53,6 @@ export function fullscreen() {
   } catch {}
 }
 
-export function mousePos(canvas, { clientX, clientY }) {
-  const rect = canvas.getBoundingClientRect()
-  return {
-    x: Math.ceil(clientX / document.body.style.zoom - rect.x),
-    y: Math.ceil(clientY / document.body.style.zoom - rect.y)
-  }
-}
-
-export function findObjById(id) {
-  const obj = Shared.objs.find(o => o.id === id)
-  return obj ? obj.o : null
-}
-
-export function findObjByFn(drawFn) {
-  const obj = Shared.objs.find(o => o.draw === drawFn)
-  return obj ? obj.o : null
-}
-
 export function addObj(cfg, pos) {
   if (cfg.o) {
     const objs = Shared.objs
@@ -107,15 +81,6 @@ export function findObjIdxById(id) {
 
 export function fn() {}
 
-export function touch(s, s1, offs = 0) {
-  return (
-    s.x + offs <= (s1.x + s1.width - offs)  &&
-    (s.x + s.width - offs) >= s1.x + offs   &&
-    s.y + offs <= (s1.y + s1.height - offs) &&
-    (s.y + s.height - offs) >= s1.y + offs
-  )
-}
-
 export function msg(msgId) {
   const m = Msgs[msgId]
   if (m) {
@@ -123,15 +88,6 @@ export function msg(msgId) {
   }
 
   return ''
-}
-
-export function repeat(timeout, every, timeoutCb, everyCb) {
-  const int = setInterval(everyCb, every)
-  setTimeout(() => {
-    clearInterval(int)
-    timeoutCb()
-  }, timeout)
-  return int
 }
 
 export function show(e) {

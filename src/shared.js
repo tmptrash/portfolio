@@ -5,6 +5,5 @@ export default {
   obs: document.createElement('div'),
   ctx: null,
   objs: null,
-  me: null,
   sounds: null
 }

@@ -1,5 +1,4 @@
 import Config from './config'
-import Shared from './shared'
 import { ASSETS } from './assets'
 
 export function Sounds() {

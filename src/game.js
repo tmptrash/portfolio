@@ -4,7 +4,7 @@ import { Level, draw as drawLevel, update as updateLevel } from './level'
 import { Me, draw as drawMe, update as updateMe } from './me'
 import { Texts, draw as drawTexts, update as updateTexts } from './texts'
 import { Fps, draw as drawFps } from './fps'
-import { el, ons, findObjById, loadText, addObj, resize, show, hide, fullscreen, clear } from './utils'
+import { el, ons, fn, loadText, addObj, resize, show, hide, fullscreen, clear } from './utils'
 import { Sounds, play as playSound } from './sounds'
 import { preload } from './assets'
 
@@ -80,8 +80,7 @@ function createObjs() {
   addObj({ draw: drawLevel,  update: updateLevel, o: Level() })
   addObj({ draw: drawMe,     update: updateMe,    o: Me(), id: Config.meId })
   addObj({ draw: drawTexts,  update: updateTexts, o: Texts() })
-  addObj({ draw: drawFps,    update: ()=>{},      o: Fps() })
-  Shared.me = findObjById(Config.meId)
+  addObj({ draw: drawFps,    update: fn,          o: Fps() })
 }
 
 function animate(g) {
