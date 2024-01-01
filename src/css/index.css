@@ -1,4 +1,4 @@
-html, body {
+html, body, canvas {
   overflow: hidden;
 }
 html { height: 100% }
