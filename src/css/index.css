@@ -38,6 +38,7 @@ button.run {
   width: 100px;
   height: 30px;
   font-family: 'Ubuntu Mono', monospace;
+  width: 130px;
 }
 div.links, div.pages {
   padding-top: 23px;
