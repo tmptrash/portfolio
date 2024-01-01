@@ -13,7 +13,8 @@ export function Sounds() {
   return sounds
 }
 
-export function play(a) {
+export function play(a, loop = false) {
+  loop && (a.loop = loop)
   a.play()
 }
 

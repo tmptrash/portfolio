@@ -45,11 +45,11 @@ export function play(g, p = true) {
 }
 
 function onSrc() {
-  location = Config.src
+  window.open(Config.src, '_blank').focus()
 }
 
 function onLinkedin() {
-  location = Config.linkedin
+  window.open(Config.linkedin, '_blank').focus()
 }
 
 function onPreload(g) {
@@ -69,7 +69,7 @@ function onPlay(g) {
   createObjs()
   hide(g.runBtn)
   show([g.srcLink, g.linkedinLink, g.canvas, g.pages])
-  playSound(Config.sounds.forest)
+  playSound(Config.sounds.forest, true)
   Config.fullscreen && fullscreen()
   play(g)
 }
