@@ -1,5 +1,5 @@
 # portfolio
-Artistic way to show my [portfolio](https://dima-tarasenko.netlify.com)
+Artistic way to show my [portfolio](https://flatline-jack.netlify.app)
 
 # how to run
 `npm i` - to install dependencies\
